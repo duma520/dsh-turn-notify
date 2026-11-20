@@ -1,0 +1,48 @@
+{
+  "name": "@duma520/dsh-turn-notify",
+  "version": "0.1.3",
+  "description": "回合结束通知：订阅 DSH 会话回合事件，按你配置的规则在回合结束/出错/中断/截断/超时/无进展时自动往选定 IM 账号发一条通知",
+  "private": true,
+  "type": "module",
+  "main": "./lib/index.js",
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "软件升级迭代记录.md"
+  ],
+  "license": "BSD-3-Clause",
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0"
+  },
+  "scripts": {
+    "typecheck": "node --check lib/index.js && node --check lib/client.js && node --check lib/rules.js && node --check lib/format.js && node --check lib/paths.js && node --check lib/bridge.js && node --check lib/watcher.js",
+    "test": "node scaffold/test_rules.mjs && node scaffold/test_config.mjs && node scaffold/test_format.mjs && node scaffold/test_watcher.mjs && node scaffold/test_client_merge.mjs",
+    "build": "node -e \"console.log('无需构建：手写 ModuleLoader bundle，零构建产物')\""
+  },
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots"
+      ]
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.2",
+    "@deepseek-ai/dsh-client-runtime": ">=0.2.0-rc.1 <1.0.0-0",
+    "@deepseek-ai/dsh-client-ui-slots": "^0.1.0-rc.6 || >=0.2.0-rc.1 <1.0.0-0",
+    "react": "^18.2.0 || ^19.0.0"
+  }
+}

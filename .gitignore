@@ -1,0 +1,41 @@
+# 依赖与构建
+node_modules/
+dist/
+
+# 运行期真实数据（绝不入库）
+config.json
+state.json
+scan.json
+rules.json
+history.json
+outbox.json
+inbox.json
+*.local.json
+
+# 备份与临时
+*.bak
+*.bak-*
+*.log
+*.tmp
+*.css-part.txt
+Thumbs.db
+.DS_Store
+
+# 凭据（即使出现也一律拦下）
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.ppk
+id_rsa*
+id_dsa*
+credentials*
+*.secrets
+
+# 开发探针与本机版本归档（不入库）
+scaffold/
+version/
