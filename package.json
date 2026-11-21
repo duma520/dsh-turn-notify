@@ -1,6 +1,6 @@
 {
   "name": "@duma520/dsh-turn-notify",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "回合结束通知：订阅 DSH 会话回合事件，按你配置的规则在回合结束/出错/中断/截断/超时/无进展时自动往选定 IM 账号发一条通知",
   "private": true,
   "type": "module",
