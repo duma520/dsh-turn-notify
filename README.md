@@ -825,4 +825,4 @@ npm run build       # 空操作：手写 ModuleLoader bundle，零构建产物
 
 **贡献**：这是一个自用插件。发现问题直接改，改完跑 `npm test`，全绿再提交。改动请同步更新 `软件升级迭代记录.md` 与 `version/` 快照。
 
-**许可**：BSD 3-Clause License，Copyright (c) 2026, duma520。
+**许可**：AGPL-3.0 License，Copyright (c) 2026, duma520。
