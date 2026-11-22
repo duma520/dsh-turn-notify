@@ -789,7 +789,7 @@ watcher.handleCandidate()
 dsh-turn-notify/
 ├── package.json                 包元数据（版本号唯一来源）
 ├── cordis.patch.yml             插件注册补丁（id: turn-notify）
-├── LICENSE                      BSD 3-Clause
+├── LICENSE                      GNU AGPL-3.0
 ├── README.md                    本文件
 ├── 软件升级迭代记录.md            每次改动的变更说明 + 下次改动模板
 ├── lib/
@@ -826,3 +826,12 @@ npm run build       # 空操作：手写 ModuleLoader bundle，零构建产物
 **贡献**：这是一个自用插件。发现问题直接改，改完跑 `npm test`，全绿再提交。改动请同步更新 `软件升级迭代记录.md` 与 `version/` 快照。
 
 **许可**：AGPL-3.0 License，Copyright (c) 2026, duma520。
+
+## 许可
+
+本项目采用 **GNU Affero General Public License v3.0（AGPL-3.0）** 发布。
+
+- 完整许可证条文见仓库根目录 [LICENSE](LICENSE)。
+- 你可以自由使用、修改、分发，包括用于商业用途，无需另行获得授权。
+- 若你修改后分发，或以网络服务方式提供本软件，必须按 AGPL-3.0 公开相应源代码。
+- 本仓库自 2026-11-23 起改用 AGPL-3.0；此前已按 MIT / BSD-3-Clause 发布的版本，其接收者依原许可证获得的授权继续有效。
