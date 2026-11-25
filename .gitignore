@@ -39,3 +39,15 @@ credentials*
 # 开发探针与本机版本归档（不入库）
 scaffold/
 version/
+
+# ---- 数据库文件（绝不入库）----
+*.db
+*.db-shm
+*.db-wal
+*.db-journal
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+*.db3
+Thumbs.db
